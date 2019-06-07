@@ -1,1 +1,35 @@
-# hello-world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login </title>
+    <script>
+        function validation()
+        {
+            var uname = document.login.uname.value;
+            var pwd = document.login.pwd.value;
+            if(uname=="" || pwd=="")
+            {
+                alert("Enter the username and password");
+                return;
+            }
+            if(pwd.length<6 || pwd.length>12 )
+            {
+                alert("Password must be enter 6 to 12 letters");
+                return;
+            }
+            
+        }
+    </script>
+</head>
+<body align="center">
+    <h1>Login form</h1>
+    <h2>
+        <form name="login" onsubmit="return validation();">
+            username :<input type="text" name="uname" value=""><br /><br/>
+            password :<input type="password" name="pwd" value=""><br /><br/>
+            <input type="submit" name="btn" value="submit"> <hr/>
+
+        </form>
+    </h2>
+</body>
+</html>
